@@ -1,0 +1,35 @@
+.weatherInfo {
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: #f1f1f1;
+	text-align: center;
+}
+
+.weatherIcon img {
+	width: 100px;
+	height: 100px;
+}
+
+.weatherDetails {
+	margin-top: 10px;
+}
+
+.weatherDetails p {
+	margin: 5px;
+}
+
+.weatherDescription {
+	margin-top: 10px;
+}
+
+.windDetails {
+	margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+	.weatherIcon img {
+		width: 80px;
+		height: 80px;
+	}
+}

@@ -1,0 +1,38 @@
+.weather-card {
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.weather-card p {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.weather-info {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.weather-info img {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.temperature p {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.temperature p:last-child {
+	margin-bottom: 0;
+}
