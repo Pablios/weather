@@ -1,9 +1,9 @@
 .weatherInfo {
 	padding: 20px;
-	border-radius: 10px;
+	border-radius: 2rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	background-color: #f1f1f1;
 	text-align: center;
+	font-size: 14px;
 }
 
 .weatherIcon img {
@@ -32,4 +32,67 @@
 		width: 80px;
 		height: 80px;
 	}
+}
+
+.banner {
+	background-image: url(../src/banner-img.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	border-radius: 2rem;
+}
+
+.name {
+	color: #fff;
+	font-size: 34px;
+	width: 79%;
+    display: inline-flex;
+
+}
+
+.cardWeather {
+	display: flex;
+	padding: 8px;
+}
+
+.cardDiv {
+	display: flex;
+    margin: -12px;
+}
+
+.card {
+	background: #eff4f6;
+	width: 50%;
+	height: auto;
+	border-radius: 2rem;
+	padding: 20px;
+	margin: 9px;
+}
+
+.cardImg {
+	background: #7668e5;
+	border-radius: 6px;
+	padding: 2px;
+}
+
+.temp {
+	color: #fff;
+}
+
+.cardTemp {
+    background-color: #7979d8;
+    border-radius: 50px;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    display: inline-table;
+}
+
+.cardImgTemp {
+    height: 110px;
+    width: auto;
+}
+
+.display {
+	display: flex;
 }
