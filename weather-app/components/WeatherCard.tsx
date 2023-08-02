@@ -1,3 +1,5 @@
+// components/WeatherCard.tsx
+// use client
 import React from 'react';
 import styles from './WeatherInfo.module.css';
 

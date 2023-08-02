@@ -1,8 +1,10 @@
+"use client";
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import WeatherCard from '../components/WeatherCard';
 
-const WeatherPage: React.FC = () => {
+const App: React.FC = () => {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState<any>(null);
 
@@ -34,4 +36,4 @@ const WeatherPage: React.FC = () => {
   );
 };
 
-export default WeatherPage;
+export default App;
