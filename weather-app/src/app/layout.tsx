@@ -1,5 +1,3 @@
-"use client";
-
 import '../../styles/globals.css';
 import '../../styles/globals-dark.css';
 import type { Metadata } from 'next';
