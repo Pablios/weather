@@ -2,7 +2,10 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloudSunRain } from '@fortawesome/free-solid-svg-icons';
 import WeatherCard from '../components/WeatherCard';
+import styles from './App.module.css';
 
 const App: React.FC = () => {
   const [city, setCity] = useState('');
@@ -21,17 +24,24 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <h1>Previsão do Tempo</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Digite o nome da cidade"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-        <button type="submit">Obter Previsão</button>
+      <form onSubmit={handleSubmit} className={styles.search}>
+        <div className={styles.searchcontainer}>
+          <input
+            type="text"
+            placeholder="Digite o nome da cidade"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+          <button type="submit">
+            <FontAwesomeIcon icon={faCloudSunRain} />
+          </button>
+        </div>
       </form>
-      {weatherData && <WeatherCard weatherData={weatherData} />}
+      {weatherData ? (
+        <WeatherCard weatherData={weatherData} />
+      ) : (
+        <p className={styles['no-results']}>Nenhum registro encontrado.</p>
+      )}
     </div>
   );
 };

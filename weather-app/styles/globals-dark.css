@@ -1,0 +1,6 @@
+body.dark-theme {
+	background-color: #111827;
+	.custom-title {
+		color: #fff;
+	}
+}

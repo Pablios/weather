@@ -46,7 +46,7 @@
 	color: #fff;
 	font-size: 34px;
 	width: 79%;
-    display: inline-flex;
+	display: inline-flex;
 
 }
 
@@ -57,7 +57,7 @@
 
 .cardDiv {
 	display: flex;
-    margin: -12px;
+	margin: -12px;
 }
 
 .card {
@@ -80,19 +80,40 @@
 }
 
 .cardTemp {
-    background-color: #7979d8;
-    border-radius: 50px;
-    width: 50%;
-    height: auto;
-    padding: 20px;
-    display: inline-table;
+	background-color: #7979d8;
+	border-radius: 50px;
+	width: 50%;
+	height: auto;
+	padding: 20px;
+	display: inline-table;
 }
 
 .cardImgTemp {
-    height: 110px;
-    width: auto;
+	height: 110px;
+	width: auto;
 }
 
 .display {
 	display: flex;
+}
+
+.cardImgTemp img {
+	width: 30%;
+	height: auto;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.cardImgTemp img {
+		width: 66%;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.cardImgTemp img {
+		width: 100%;
+		height: auto;
+	}
 }

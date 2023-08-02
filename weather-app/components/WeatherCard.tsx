@@ -1,5 +1,3 @@
-// components/WeatherCard.tsx
-// use client
 import React from 'react';
 import styles from './WeatherInfo.module.css';
 
@@ -46,6 +44,7 @@ function traduzirTempo(descricaoEmIngles: string): string {
 		"thunderstorm": "Trovoadas",
 		"snow": "Neve",
 		"mist": "Névoa",
+		"heavy intensity rain": "chuva de forte intensidade",
 	};
 
 	return traducoes[descricaoEmIngles] || descricaoEmIngles;
@@ -61,7 +60,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ weatherData }) => {
 
 	const weatherIcon = weather[0].icon;
 	const weatherDescription = traduzirTempo(weather[0].description); // Traduzindo a descrição do tempo
-
+	const url = `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 	return (
 		<section>
 			<div className={styles.banner}>
@@ -71,16 +70,15 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ weatherData }) => {
 
 						<div className={styles.cardTemp}>
 							<div className={styles.cardImgTemp}>
-								<img src={`https://wecast.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsun_cloud.922efd42.png&w=384&q=75`} alt="Weather Icon" />
+								<img src={url} />
 							</div>
-
 
 							<h2 className={styles.temp}>{weatherDescription}</h2>
 							<h2 className={styles.temp}>Temperatura: {temp}°C</h2>
 							<h4 className={styles.temp}>{temp_min}°C - {temp_max}°C</h4>
 						</div>
 					</div>
-		
+
 
 					<div className={styles.weatherDetails}>
 						<div className={styles.cardDiv}>
