@@ -1,6 +1,6 @@
 # weather
 Este é um projeto de Previsão do Tempo desenvolvido em Next.js que permite aos usuários obter informações meteorológicas para uma cidade específica.
-Vercel project https://weather-b4ykorlvf-pablios.vercel.app/
+Vercel project https://weather-git-main-pablios.vercel.app/
 
 # Recursos
 Busca de previsão do tempo por nome da cidade
