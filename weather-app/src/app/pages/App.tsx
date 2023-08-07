@@ -10,11 +10,12 @@ import styles from './App.module.css';
 const App: React.FC = () => {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState<any>(null);
+  const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:3001/weather/forecast/${city}`);
+      const response = await axios.get(`${apiBaseUrl}/weather/forecast/${city}`);
       setWeatherData(response.data);
     } catch (error) {
       console.error(error);

@@ -35,7 +35,7 @@
 }
 
 .banner {
-	background-image: url(../src/banner-img.png);
+	background-image: url(../../banner-img.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50%;
