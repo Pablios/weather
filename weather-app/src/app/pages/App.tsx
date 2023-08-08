@@ -10,15 +10,16 @@ import styles from './App.module.css';
 const App: React.FC = () => {
   const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState<any>(null);
-  const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "";
+  const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "https://weather-eosin-beta.vercel.app";
+  const apiKey = '385da84a9c90ef912f070c1c7b37d4d7';
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`${apiBaseUrl}/weather/forecast/${city}`);
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
       setWeatherData(response.data);
     } catch (error) {
-      console.error(error);
+      console.error(error); 
       setWeatherData(null);
     }
   };
